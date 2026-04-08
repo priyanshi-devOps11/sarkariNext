@@ -20,7 +20,7 @@ class AppTheme {
       foregroundColor: AppColors.textPrimary,
       titleTextStyle: AppTextStyles.h3,
     ),
-    cardTheme: CardTheme(
+    cardTheme: CardThemeData(
       elevation: 0,
       color: AppColors.cardLight,
       shape: RoundedRectangleBorder(
@@ -71,7 +71,7 @@ class AppTheme {
       backgroundColor: AppColors.bgDark,
       foregroundColor: AppColors.textDark,
     ),
-    cardTheme: CardTheme(
+    cardTheme: CardThemeData(
       elevation: 0,
       color: AppColors.cardDark,
       shape: RoundedRectangleBorder(
