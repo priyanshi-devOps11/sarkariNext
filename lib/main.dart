@@ -6,7 +6,6 @@ import 'app.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
   // Initialize Hive
   await Hive.initFlutter();
   await Hive.openBox(AppConstants.userBox);
