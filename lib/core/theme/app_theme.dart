@@ -1,83 +1,44 @@
 import 'package:flutter/material.dart';
 import 'app_colors.dart';
-import 'app_text_styles.dart';
 
 class AppTheme {
-  AppTheme._();
-
-  static ThemeData get light => ThemeData(
-    useMaterial3: true,
-    brightness: Brightness.light,
+  static ThemeData get theme => ThemeData(
     colorScheme: ColorScheme.fromSeed(
-      seedColor: AppColors.primary,
-      brightness: Brightness.light,
+      seedColor: AppColors.primaryDark,
+      primary: AppColors.primaryDark,
+      secondary: AppColors.accent,
+      surface: AppColors.surface,
     ),
-    scaffoldBackgroundColor: AppColors.bgLight,
+    scaffoldBackgroundColor: AppColors.background,
+    fontFamily: 'Roboto',
     appBarTheme: const AppBarTheme(
+      backgroundColor: AppColors.primaryDark,
+      foregroundColor: Colors.white,
       elevation: 0,
-      centerTitle: false,
-      backgroundColor: AppColors.surfaceLight,
-      foregroundColor: AppColors.textPrimary,
-      titleTextStyle: AppTextStyles.h3,
-    ),
-    cardTheme: CardThemeData(
-      elevation: 0,
-      color: AppColors.cardLight,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(16),
-        side: BorderSide(color: Colors.grey.shade100),
-      ),
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-        backgroundColor: AppColors.primary,
+        backgroundColor: AppColors.accent,
         foregroundColor: Colors.white,
-        textStyle: AppTextStyles.button,
-        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-        elevation: 0,
+        minimumSize: const Size(double.infinity, 52),
       ),
     ),
     inputDecorationTheme: InputDecorationTheme(
-      filled: true,
-      fillColor: AppColors.bgLight,
-      contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(12),
-        borderSide: BorderSide.none,
+        borderSide: const BorderSide(color: AppColors.border),
       ),
       enabledBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(12),
-        borderSide: BorderSide(color: Colors.grey.shade200),
+        borderSide: const BorderSide(color: AppColors.border, width: 2),
       ),
       focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(12),
-        borderSide: const BorderSide(color: AppColors.primary, width: 1.5),
+        borderSide: const BorderSide(color: AppColors.primaryDark, width: 2),
       ),
+      contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
     ),
-  );
-
-  static ThemeData get dark => ThemeData(
     useMaterial3: true,
-    brightness: Brightness.dark,
-    colorScheme: ColorScheme.fromSeed(
-      seedColor: AppColors.primary,
-      brightness: Brightness.dark,
-    ),
-    scaffoldBackgroundColor: AppColors.bgDark,
-    appBarTheme: const AppBarTheme(
-      elevation: 0,
-      centerTitle: false,
-      backgroundColor: AppColors.bgDark,
-      foregroundColor: AppColors.textDark,
-    ),
-    cardTheme: CardThemeData(
-      elevation: 0,
-      color: AppColors.cardDark,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(16),
-        side: const BorderSide(color: Color(0xFF2D2B45)),
-      ),
-    ),
   );
 }
