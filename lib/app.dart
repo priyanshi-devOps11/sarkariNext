@@ -11,8 +11,8 @@ class App extends ConsumerWidget {
     final router = ref.watch(appRouterProvider);
     return MaterialApp.router(
       title: 'Sarkari Next',
-      theme: AppTheme.light,
-      darkTheme: AppTheme.dark,
+      theme: AppTheme.theme,
+      darkTheme: AppTheme.theme,
       themeMode: ThemeMode.system,
       routerConfig: router,
       debugShowCheckedModeBanner: false,
